@@ -29,3 +29,15 @@ def is_odd_string(word):
     """
 
     # Hint: you may find the ord() function useful here
+    """
+    ord() does not follow expected return of "a"=1,"b"=2,ect
+    ord("a") = 97, ord("b") = 98, ord("A") = 65, ord ("B") = 66
+    ord() still returns odd on a and even on b and ect...
+    ord() will work to return odd or even
+    """
+    total = 0
+    for letter in word:
+        total += ord(letter)
+    if total % 2 == 0:
+        return False
+    return True

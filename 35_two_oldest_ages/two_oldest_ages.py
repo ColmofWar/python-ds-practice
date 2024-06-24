@@ -27,4 +27,4 @@ def two_oldest_ages(ages):
     for x in ages:
         age_freq[x] = age_freq.get(x,0) + 1
 
-    return [*age_freq][-2],[*age_freq][-1]
+    return ([*age_freq][-2],[*age_freq][-1])
