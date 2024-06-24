@@ -11,3 +11,10 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
+    mode_num = 1
+    mode_num_value = 1
+    for num in nums:
+        if nums.count(num) > mode_num_value:
+            mode_num = num
+            mode_num_value = nums.count(num)
+    return mode_num

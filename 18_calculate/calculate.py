@@ -26,3 +26,17 @@ def calculate(operation, a, b, make_int=False, message='The result is'):
         >>> calculate('foo', 2, 3)
         
     """
+
+    import operator
+    operations = {
+    "add": operator.add,
+    "subtract": operator.sub,
+    "multiply": operator.mul,
+    "divide": operator.truediv
+    }
+    if operations.get(operation):
+        result = operations[operation](a,b)
+        if make_int:
+            result = int(result)
+        return message + " " + str(result)
+    return None
